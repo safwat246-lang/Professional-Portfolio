@@ -1,0 +1,1010 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Fadi Tawdros — Pharmaceutical QA Professional | Sterile Manufacturing & AI Automation</title>
+<meta name="description" content="Fadi Tawdros — Pharmaceutical Quality Assurance Professional in sterile manufacturing, validation and cGMP/EMA/EDA compliance, who builds AI-assisted software to modernise regulated quality operations." />
+<meta name="author" content="Fadi Tawdros" />
+<meta name="theme-color" content="#0a1424" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23d8b14a'/%3E%3Ctext x='32' y='45' font-family='Arial,Helvetica,sans-serif' font-size='33' font-weight='700' text-anchor='middle' fill='%231a1304'%3EFT%3C/text%3E%3C/svg%3E" />
+
+<!-- Open Graph -->
+<meta property="og:title" content="Fadi Tawdros — Pharmaceutical QA Professional" />
+<meta property="og:description" content="Sterile manufacturing & validation · cGMP / EMA / EDA compliance · AI-driven QA automation." />
+<meta property="og:type" content="website" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+
+<style>
+  :root{
+    --navy-900:#070f1d;
+    --navy-850:#0a1424;
+    --navy-800:#0c1a2e;
+    --navy-700:#0f1f38;
+    --navy-600:#16294626;
+    --card:#101f37;
+    --card-hi:#13284a;
+    --line:rgba(212,175,55,.16);
+    --line-soft:rgba(255,255,255,.08);
+    --gold:#d8b14a;
+    --gold-hi:#f1d480;
+    --gold-deep:#b88f2f;
+    --ink:#eef3fb;
+    --muted:#9fb2cc;
+    --muted-2:#73869f;
+    --radius:16px;
+    --maxw:1140px;
+    --shadow:0 24px 60px -28px rgba(0,0,0,.75);
+  }
+
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;scroll-padding-top:84px}
+  body{
+    font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+    background:var(--navy-850);
+    color:var(--ink);
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  body::before{
+    content:"";position:fixed;inset:0;z-index:-2;
+    background:
+      radial-gradient(900px 520px at 78% -8%, rgba(216,177,74,.10), transparent 60%),
+      radial-gradient(800px 600px at -10% 12%, rgba(34,73,128,.28), transparent 55%),
+      linear-gradient(180deg,var(--navy-900),var(--navy-850) 40%,var(--navy-800));
+  }
+  h1,h2,h3,h4,.display{font-family:'Space Grotesk',Inter,sans-serif;letter-spacing:-.01em;line-height:1.12}
+  a{color:inherit;text-decoration:none}
+  img{max-width:100%;display:block}
+  ::selection{background:rgba(216,177,74,.3);color:#fff}
+
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+  .gold{color:var(--gold)}
+  .eyebrow{
+    display:inline-flex;align-items:center;gap:9px;
+    font-size:.74rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;
+    color:var(--gold);margin-bottom:18px;
+  }
+  .eyebrow::before{content:"";width:26px;height:1px;background:linear-gradient(90deg,var(--gold),transparent)}
+
+  /* ---------- NAV ---------- */
+  header.nav{
+    position:fixed;top:0;left:0;right:0;z-index:50;
+    transition:background .3s,border-color .3s,backdrop-filter .3s;
+    border-bottom:1px solid transparent;
+  }
+  header.nav.scrolled{
+    background:rgba(8,16,29,.82);
+    backdrop-filter:blur(14px);
+    border-bottom:1px solid var(--line-soft);
+  }
+  .nav-inner{max-width:var(--maxw);margin:0 auto;padding:16px 24px;display:flex;align-items:center;justify-content:space-between}
+  .brand{display:flex;align-items:center;gap:12px;font-family:'Space Grotesk';font-weight:700}
+  .monogram{
+    width:42px;height:42px;border-radius:11px;display:grid;place-items:center;
+    font-family:'Space Grotesk';font-weight:700;font-size:1.02rem;color:#1a1304;
+    background:linear-gradient(140deg,var(--gold-hi),var(--gold) 55%,var(--gold-deep));
+    box-shadow:0 6px 20px -6px rgba(216,177,74,.6), inset 0 1px 1px rgba(255,255,255,.5);
+  }
+  .brand small{display:block;font-family:'Inter';font-weight:500;font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted-2)}
+  .navlinks{display:flex;align-items:center;gap:6px}
+  .navlinks a{
+    font-size:.9rem;font-weight:500;color:var(--muted);padding:9px 14px;border-radius:9px;
+    transition:color .2s,background .2s;
+  }
+  .navlinks a:hover{color:var(--ink);background:rgba(255,255,255,.05)}
+  .nav-cta{
+    margin-left:8px;color:var(--gold)!important;border:1px solid var(--line);
+  }
+  .nav-cta:hover{background:rgba(216,177,74,.1)!important;color:var(--gold-hi)!important}
+  .burger{display:none;flex-direction:column;gap:5px;background:none;border:0;cursor:pointer;padding:8px}
+  .burger span{width:24px;height:2px;background:var(--ink);border-radius:2px;transition:.3s}
+  .burger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+  .burger.open span:nth-child(2){opacity:0}
+  .burger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+
+  /* ---------- BUTTONS ---------- */
+  .btn{
+    display:inline-flex;align-items:center;gap:9px;font-weight:600;font-size:.92rem;
+    padding:13px 24px;border-radius:11px;cursor:pointer;border:1px solid transparent;
+    transition:transform .18s,box-shadow .25s,background .25s,border-color .25s;
+  }
+  .btn:hover{transform:translateY(-2px)}
+  .btn-gold{
+    background:linear-gradient(140deg,var(--gold-hi),var(--gold) 60%,var(--gold-deep));
+    color:#1a1304;box-shadow:0 14px 30px -12px rgba(216,177,74,.6);
+  }
+  .btn-gold:hover{box-shadow:0 18px 38px -12px rgba(216,177,74,.75)}
+  .btn-ghost{border-color:var(--line-soft);color:var(--ink);background:rgba(255,255,255,.02)}
+  .btn-ghost:hover{border-color:var(--line);background:rgba(216,177,74,.08)}
+  .btn svg{width:17px;height:17px}
+
+  /* ---------- SECTION ---------- */
+  section{padding:104px 0;position:relative}
+  .sec-head{max-width:680px;margin-bottom:54px}
+  .sec-head h2{font-size:clamp(1.9rem,4vw,2.7rem);font-weight:700;margin-bottom:16px}
+  .sec-head p{color:var(--muted);font-size:1.05rem}
+  .divider-glow{height:1px;background:linear-gradient(90deg,transparent,var(--line),transparent)}
+
+  /* ---------- HERO ---------- */
+  .hero{min-height:100vh;display:flex;align-items:center;padding-top:120px;padding-bottom:60px}
+  .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center;width:100%}
+  .hero-badge{
+    display:inline-flex;align-items:center;gap:9px;padding:7px 15px;border-radius:999px;
+    background:rgba(216,177,74,.08);border:1px solid var(--line);
+    font-size:.8rem;font-weight:500;color:var(--gold-hi);margin-bottom:26px;
+  }
+  .pulse{width:8px;height:8px;border-radius:50%;background:var(--gold);box-shadow:0 0 0 0 rgba(216,177,74,.7);animation:pulse 2.2s infinite}
+  @keyframes pulse{70%{box-shadow:0 0 0 9px rgba(216,177,74,0)}100%{box-shadow:0 0 0 0 rgba(216,177,74,0)}}
+  .hero h1{font-size:clamp(2.6rem,6vw,4.3rem);font-weight:700;margin-bottom:22px}
+  .hero h1 .l2{color:var(--gold);display:block}
+  .hero .lede{font-size:1.16rem;color:var(--muted);max-width:560px;margin-bottom:18px}
+  .hero .sub{font-size:1rem;color:var(--muted-2);max-width:560px;margin-bottom:34px}
+  .hero-cta{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:42px}
+  .hero-stats{display:flex;gap:34px;flex-wrap:wrap}
+  .stat .n{font-family:'Space Grotesk';font-size:1.85rem;font-weight:700;color:var(--ink);line-height:1}
+  .stat .n span{color:var(--gold)}
+  .stat .l{font-size:.82rem;color:var(--muted-2);margin-top:6px}
+
+  /* hero visual card */
+  .hero-card{
+    position:relative;border-radius:22px;padding:34px;
+    background:linear-gradient(160deg,var(--card-hi),var(--card));
+    border:1px solid var(--line);box-shadow:var(--shadow);
+  }
+  .hero-card::before{
+    content:"";position:absolute;inset:0;border-radius:22px;padding:1px;
+    background:linear-gradient(160deg,rgba(216,177,74,.5),transparent 40%);
+    -webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);
+    -webkit-mask-composite:xor;mask-composite:exclude;pointer-events:none;
+  }
+  .hero-photo{
+    width:98px;height:98px;border-radius:50%;object-fit:cover;object-position:center top;margin-bottom:22px;
+    border:3px solid var(--gold);background:var(--navy-700);
+    box-shadow:0 16px 36px -12px rgba(216,177,74,.5),0 0 0 6px rgba(216,177,74,.08);
+  }
+  .hero-card h3{font-size:1.3rem;margin-bottom:4px}
+  .hero-card .role{color:var(--gold);font-size:.92rem;font-weight:600;margin-bottom:20px}
+  .hc-row{display:flex;align-items:center;gap:11px;padding:11px 0;border-top:1px solid var(--line-soft);font-size:.9rem;color:var(--muted)}
+  .hc-row svg{width:17px;height:17px;color:var(--gold);flex-shrink:0}
+  .hc-row b{color:var(--ink);font-weight:600}
+
+  /* ---------- ABOUT ---------- */
+  .about-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:54px;align-items:start}
+  .about-grid p{color:var(--muted);font-size:1.04rem;margin-bottom:18px}
+  .about-grid p b{color:var(--ink);font-weight:600}
+  .about-grid .gold{font-weight:600}
+  .fact-card{
+    background:linear-gradient(160deg,var(--card-hi),var(--card));
+    border:1px solid var(--line);border-radius:var(--radius);padding:26px;box-shadow:var(--shadow);
+  }
+  .fact-card h4{font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:18px}
+  .fact{display:flex;gap:13px;padding:13px 0;border-top:1px solid var(--line-soft)}
+  .fact:first-of-type{border-top:0;padding-top:0}
+  .fact svg{width:19px;height:19px;color:var(--gold);flex-shrink:0;margin-top:2px}
+  .fact .t{font-weight:600;font-size:.95rem}
+  .fact .d{font-size:.85rem;color:var(--muted-2)}
+  .digstrip{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+  .digstrip .chip{font-size:.78rem;color:var(--muted);background:rgba(255,255,255,.03);border:1px solid var(--line-soft);padding:6px 12px;border-radius:999px}
+  .digstrip .chip b{color:var(--gold-hi)}
+
+  /* ---------- EXPERIENCE ---------- */
+  .timeline{position:relative;margin-top:10px}
+  .timeline::before{content:"";position:absolute;left:11px;top:8px;bottom:8px;width:2px;background:linear-gradient(180deg,var(--gold),rgba(216,177,74,.15))}
+  .tl-item{position:relative;padding-left:48px;padding-bottom:40px}
+  .tl-item:last-child{padding-bottom:0}
+  .tl-dot{position:absolute;left:0;top:4px;width:24px;height:24px;border-radius:50%;background:var(--navy-800);border:2px solid var(--gold);display:grid;place-items:center}
+  .tl-dot::after{content:"";width:8px;height:8px;border-radius:50%;background:var(--gold)}
+  .tl-item.current .tl-dot{box-shadow:0 0 0 6px rgba(216,177,74,.12)}
+  .tl-card{
+    background:linear-gradient(160deg,var(--card-hi),var(--card));
+    border:1px solid var(--line-soft);border-radius:var(--radius);padding:24px 26px;
+    transition:border-color .25s,transform .25s;
+  }
+  .tl-card:hover{border-color:var(--line);transform:translateY(-3px)}
+  .tl-top{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;align-items:baseline;margin-bottom:4px}
+  .tl-role{font-family:'Space Grotesk';font-weight:600;font-size:1.18rem}
+  .tl-when{font-size:.82rem;color:var(--gold);font-weight:600;white-space:nowrap}
+  .tl-co{font-size:.92rem;color:var(--muted);margin-bottom:14px}
+  .tl-co .badge-cur{display:inline-block;margin-left:8px;font-size:.68rem;font-weight:700;letter-spacing:.05em;color:#1a1304;background:var(--gold);padding:2px 8px;border-radius:6px;vertical-align:middle}
+  .tl-card ul{list-style:none;display:grid;gap:9px}
+  .tl-card li{position:relative;padding-left:20px;font-size:.93rem;color:var(--muted)}
+  .tl-card li::before{content:"";position:absolute;left:0;top:9px;width:6px;height:6px;border-radius:2px;background:var(--gold);transform:rotate(45deg)}
+  .tl-card li b{color:var(--ink);font-weight:600}
+
+  /* ---------- PROJECTS ---------- */
+  .proj-intro{display:flex;gap:14px;align-items:flex-start;background:linear-gradient(160deg,rgba(216,177,74,.07),transparent);border:1px solid var(--line);border-radius:var(--radius);padding:20px 24px;margin-bottom:42px}
+  .proj-intro svg{width:22px;height:22px;color:var(--gold);flex-shrink:0;margin-top:3px}
+  .proj-intro p{color:var(--muted);font-size:.98rem}
+  .proj-intro b{color:var(--ink)}
+
+  .project{background:linear-gradient(160deg,var(--card-hi),var(--card));border:1px solid var(--line-soft);border-radius:20px;overflow:hidden;margin-bottom:40px;box-shadow:var(--shadow)}
+  .p-info{display:grid;grid-template-columns:1.25fr 1fr;gap:14px 46px;align-items:start;padding:40px 40px 32px}
+  .p-num{font-family:'Space Grotesk';font-size:.82rem;font-weight:600;color:var(--gold);letter-spacing:.12em;margin-bottom:12px}
+  .p-tags{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px}
+  .p-tag{font-size:.72rem;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--gold-hi);background:rgba(216,177,74,.1);border:1px solid var(--line);padding:5px 11px;border-radius:7px}
+  .p-tag.live{color:#7ee0a8;background:rgba(80,200,130,.1);border-color:rgba(80,200,130,.25)}
+  .p-tag.ai{color:#9db8ff;background:rgba(110,140,255,.1);border-color:rgba(110,140,255,.25)}
+  .p-main h3{font-size:1.6rem;font-weight:700;margin-bottom:14px}
+  .p-main>p{color:var(--muted);font-size:1rem;margin-bottom:22px}
+  .p-feats{list-style:none;display:grid;gap:11px;margin:0;align-content:start}
+  .p-feats li{position:relative;padding-left:26px;font-size:.92rem;color:var(--muted)}
+  .p-feats li b{color:var(--ink);font-weight:600}
+  .p-feats li svg{position:absolute;left:0;top:3px;width:16px;height:16px;color:var(--gold)}
+  .p-actions{display:flex;gap:12px;flex-wrap:wrap}
+  .p-note{font-size:.82rem;color:var(--muted-2);margin-top:16px;display:flex;align-items:center;gap:7px}
+  .p-note svg{width:14px;height:14px;color:var(--gold-deep)}
+
+  /* full-width screenshot stage */
+  .p-stage{position:relative;background:radial-gradient(130% 150% at 50% 0,#11223e,#0a1322);border-top:1px solid var(--line-soft);padding:28px 40px 44px}
+  .carousel{position:relative;width:100%}
+  .slides{position:relative;width:100%;aspect-ratio:21/10}
+  .slide{position:absolute;inset:0;opacity:0;transition:opacity .5s;display:flex;align-items:center;justify-content:center}
+  .slide.active{opacity:1}
+  .slide img{max-width:100%;max-height:100%;width:auto;height:auto;border-radius:11px;border:1px solid var(--line-soft);box-shadow:0 26px 60px -22px rgba(0,0,0,.85)}
+  .car-bar{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-top:18px}
+  .car-cap{font-size:.84rem;font-weight:600;color:var(--ink)}
+  .car-nav{display:flex;align-items:center;gap:14px}
+  .car-btn{width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,.04);border:1px solid var(--line);color:var(--gold);cursor:pointer;display:grid;place-items:center;transition:background .2s,border-color .2s;flex-shrink:0}
+  .car-btn:hover{background:rgba(216,177,74,.16);border-color:var(--gold-deep)}
+  .car-btn svg{width:18px;height:18px}
+  .dots{display:flex;gap:8px}
+  .dot{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.22);cursor:pointer;transition:background .2s,width .2s}
+  .dot.active{background:var(--gold);width:22px;border-radius:5px}
+
+  /* single screenshot stage (project 1) */
+  .solo-shot{display:block;margin:0 auto;max-width:100%;max-height:540px;width:auto;height:auto;border-radius:11px;border:1px solid var(--line-soft);box-shadow:0 26px 60px -22px rgba(0,0,0,.85)}
+
+  /* ---------- CASE STUDIES ---------- */
+  .case{position:relative;background:linear-gradient(160deg,var(--card-hi),var(--card));border:1px solid var(--line-soft);border-radius:20px;padding:38px 40px 38px 44px;margin-bottom:32px;box-shadow:var(--shadow);overflow:hidden}
+  .case::before{content:"";position:absolute;top:0;left:0;width:4px;height:100%;background:linear-gradient(180deg,var(--gold),var(--gold-deep))}
+  .case-head{display:flex;align-items:center;gap:14px;margin-bottom:14px;flex-wrap:wrap}
+  .case-num{font-family:'Space Grotesk';font-size:.82rem;font-weight:600;color:var(--gold);letter-spacing:.12em}
+  .case-tag{font-size:.72rem;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--gold-hi);background:rgba(216,177,74,.1);border:1px solid var(--line);padding:5px 11px;border-radius:7px}
+  .case h3{font-size:1.5rem;font-weight:700;margin-bottom:14px;max-width:780px}
+  .case-sit{color:var(--muted);font-size:1rem;margin-bottom:28px;max-width:900px}
+  .case-sit b{color:var(--ink);font-weight:600}
+  .case-body{display:grid;grid-template-columns:1.5fr 1fr;gap:38px;align-items:start}
+  .case-do h4,.impact-panel h4{font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:16px}
+  .case-do ul{list-style:none;display:grid;gap:13px}
+  .case-do li{position:relative;padding-left:24px;font-size:.93rem;color:var(--muted)}
+  .case-do li b{color:var(--ink);font-weight:600}
+  .case-do li::before{content:"";position:absolute;left:0;top:8px;width:7px;height:7px;border-radius:2px;background:var(--gold);transform:rotate(45deg)}
+  .impact-panel{background:radial-gradient(130% 150% at 50% 0,rgba(216,177,74,.12),rgba(216,177,74,.02));border:1px solid var(--line);border-radius:16px;padding:24px 26px}
+  .impact-metric{padding:14px 0;border-top:1px solid var(--line-soft)}
+  .impact-metric:first-of-type{border-top:0;padding-top:0}
+  .impact-metric .n{font-family:'Space Grotesk';font-size:1.7rem;font-weight:700;color:var(--gold-hi);line-height:1}
+  .impact-metric .l{font-size:.84rem;color:var(--muted);margin-top:5px}
+  .case-reco{display:flex;align-items:flex-start;gap:10px;margin-top:18px;padding-top:16px;border-top:1px solid var(--line-soft);font-size:.86rem;color:var(--ink);font-weight:500}
+  .case-reco svg{width:18px;height:18px;color:var(--gold);flex-shrink:0;margin-top:1px}
+  .case-takeaway{margin-top:26px;padding:14px 18px;background:rgba(255,255,255,.03);border-left:2px solid var(--gold);border-radius:0 10px 10px 0;font-size:.9rem;color:var(--muted)}
+  .case-takeaway b{color:var(--ink);font-weight:600}
+
+  /* ---------- SKILLS ---------- */
+  .skills-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .skill-card{background:linear-gradient(160deg,var(--card-hi),var(--card));border:1px solid var(--line-soft);border-radius:var(--radius);padding:28px;transition:border-color .25s,transform .25s}
+  .skill-card:hover{border-color:var(--line);transform:translateY(-4px)}
+  .skill-ic{width:46px;height:46px;border-radius:12px;display:grid;place-items:center;margin-bottom:18px;background:rgba(216,177,74,.1);border:1px solid var(--line)}
+  .skill-ic svg{width:23px;height:23px;color:var(--gold)}
+  .skill-card h4{font-size:1.12rem;margin-bottom:16px}
+  .skill-list{display:flex;flex-wrap:wrap;gap:8px}
+  .skill-list span{font-size:.82rem;color:var(--muted);background:rgba(255,255,255,.03);border:1px solid var(--line-soft);padding:6px 12px;border-radius:8px;transition:color .2s,border-color .2s}
+  .skill-card:hover .skill-list span{border-color:var(--line)}
+
+  /* ---------- CREDENTIALS ---------- */
+  .cred-grid{display:grid;grid-template-columns:1.4fr 1fr;gap:30px;align-items:start}
+  .panel{background:linear-gradient(160deg,var(--card-hi),var(--card));border:1px solid var(--line-soft);border-radius:var(--radius);padding:30px}
+  .panel h4{display:flex;align-items:center;gap:10px;font-size:.82rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:22px}
+  .panel h4 svg{width:18px;height:18px}
+  .cert{display:flex;justify-content:space-between;gap:14px;padding:13px 0;border-top:1px solid var(--line-soft)}
+  .cert:first-of-type{border-top:0;padding-top:0}
+  .cert .c-name{font-size:.94rem;font-weight:500;color:var(--ink)}
+  .cert .c-iss{font-size:.82rem;color:var(--muted-2)}
+  .cert .c-yr{font-size:.8rem;color:var(--gold);font-weight:600;white-space:nowrap}
+  .award{display:flex;gap:13px;padding:14px 0;border-top:1px solid var(--line-soft)}
+  .award:first-of-type{border-top:0;padding-top:0}
+  .award .tr{width:38px;height:38px;border-radius:10px;flex-shrink:0;display:grid;place-items:center;background:linear-gradient(140deg,rgba(216,177,74,.22),rgba(216,177,74,.06));border:1px solid var(--line)}
+  .award .tr svg{width:19px;height:19px;color:var(--gold)}
+  .award .a-t{font-weight:600;font-size:.95rem}
+  .award .a-d{font-size:.82rem;color:var(--muted-2)}
+
+  /* ---------- BEYOND ---------- */
+  .beyond-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+  .by-card{background:linear-gradient(160deg,var(--card-hi),var(--card));border:1px solid var(--line-soft);border-radius:var(--radius);padding:26px;transition:border-color .25s,transform .25s}
+  .by-card:hover{border-color:var(--line);transform:translateY(-3px)}
+  .by-top{display:flex;align-items:center;gap:13px;margin-bottom:8px}
+  .by-ic{width:42px;height:42px;border-radius:11px;display:grid;place-items:center;background:rgba(216,177,74,.1);border:1px solid var(--line);flex-shrink:0}
+  .by-ic svg{width:21px;height:21px;color:var(--gold)}
+  .by-card h4{font-size:1.06rem}
+  .by-card .by-meta{font-size:.8rem;color:var(--gold);font-weight:600}
+  .by-card p{font-size:.9rem;color:var(--muted);margin-top:4px}
+
+  /* ---------- CONTACT ---------- */
+  #contact{padding-bottom:120px}
+  .contact-card{position:relative;background:linear-gradient(160deg,var(--card-hi),var(--card));border:1px solid var(--line);border-radius:24px;padding:56px;text-align:center;box-shadow:var(--shadow);overflow:hidden}
+  .contact-card::before{content:"";position:absolute;top:-50%;left:50%;transform:translateX(-50%);width:520px;height:520px;background:radial-gradient(circle,rgba(216,177,74,.12),transparent 65%);pointer-events:none}
+  .contact-card h2{font-size:clamp(1.9rem,4vw,2.7rem);margin-bottom:14px;position:relative}
+  .contact-card p{color:var(--muted);font-size:1.06rem;max-width:540px;margin:0 auto 36px;position:relative}
+  .contact-methods{display:flex;justify-content:center;gap:14px;flex-wrap:wrap;position:relative}
+  .cm{display:flex;align-items:center;gap:11px;padding:14px 20px;border-radius:12px;background:rgba(255,255,255,.03);border:1px solid var(--line-soft);transition:border-color .25s,transform .2s,background .25s;text-align:left}
+  .cm:hover{border-color:var(--line);transform:translateY(-3px);background:rgba(216,177,74,.06)}
+  .cm svg{width:22px;height:22px;color:var(--gold);flex-shrink:0}
+  .cm .l{font-size:.72rem;color:var(--muted-2);text-transform:uppercase;letter-spacing:.08em}
+  .cm .v{font-size:.94rem;font-weight:600;color:var(--ink)}
+  .contact-loc{margin-top:34px;font-size:.9rem;color:var(--muted-2);position:relative;display:flex;align-items:center;justify-content:center;gap:8px}
+  .contact-loc svg{width:16px;height:16px;color:var(--gold)}
+
+  /* ---------- FOOTER ---------- */
+  footer{border-top:1px solid var(--line-soft);padding:34px 0}
+  .foot-inner{max-width:var(--maxw);margin:0 auto;padding:0 24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px}
+  .foot-inner .c{font-size:.85rem;color:var(--muted-2)}
+  .foot-links{display:flex;gap:18px}
+  .foot-links a{font-size:.85rem;color:var(--muted);transition:color .2s}
+  .foot-links a:hover{color:var(--gold)}
+
+  /* ---------- REVEAL ---------- */
+  .reveal{opacity:0;transform:translateY(28px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1)}
+  .reveal.in{opacity:1;transform:none}
+
+  /* ---------- RESPONSIVE ---------- */
+  @media(max-width:1040px){
+    .navlinks a{padding:9px 10px;font-size:.86rem}
+  }
+  @media(max-width:980px){
+    .hero-grid,.about-grid,.cred-grid{grid-template-columns:1fr}
+    .hero-card{max-width:440px}
+    .skills-grid{grid-template-columns:1fr 1fr}
+    .p-info{grid-template-columns:1fr;gap:6px}
+    .case-body{grid-template-columns:1fr;gap:26px}
+  }
+  @media(max-width:900px){
+    .navlinks{position:fixed;top:0;right:0;height:100vh;width:min(80vw,320px);flex-direction:column;justify-content:center;align-items:flex-start;gap:6px;padding:40px;background:rgba(8,15,26,.97);backdrop-filter:blur(16px);border-left:1px solid var(--line-soft);transform:translateX(100%);transition:transform .35s}
+    .navlinks.open{transform:none}
+    .navlinks a{width:100%;font-size:1.05rem;padding:13px 16px}
+    .nav-cta{margin-left:0;margin-top:8px}
+    .burger{display:flex;z-index:60}
+    section{padding:74px 0}
+    .hero{padding-top:110px}
+    .skills-grid,.beyond-grid{grid-template-columns:1fr}
+    .p-info{padding:28px 24px 22px}
+    .p-stage{padding:18px 20px 30px}
+    .case{padding:28px 22px 28px 26px}
+    .contact-card{padding:34px 22px}
+    .hero-stats{gap:24px}
+  }
+  @media(max-width:420px){
+    .hero-stats{flex-direction:column;gap:18px}
+  }
+
+  @media(prefers-reduced-motion:reduce){
+    *{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important;scroll-behavior:auto!important}
+    .reveal{opacity:1!important;transform:none!important}
+  }
+</style>
+</head>
+<body>
+
+<!-- ============ NAV ============ -->
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="#home" class="brand" aria-label="Fadi Tawdros home">
+      <span class="monogram">FT</span>
+      <span>Fadi Tawdros<small>Pharmaceutical QA</small></span>
+    </a>
+    <nav class="navlinks" id="navlinks">
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#initiatives">QA Work</a>
+      <a href="#projects">AI Tools</a>
+      <a href="#skills">Skills</a>
+      <a href="#credentials">Credentials</a>
+      <a href="#contact" class="nav-cta">Get in touch</a>
+    </nav>
+    <button class="burger" id="burger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main>
+<!-- ============ HERO ============ -->
+<section class="hero" id="home">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div class="hero-left">
+        <span class="hero-badge"><span class="pulse"></span> Driven by innovation and new challenges</span>
+        <h1>Pharmaceutical<br>Quality Assurance<span class="l2">Professional.</span></h1>
+        <p class="lede">Eight years safeguarding sterile and aseptic manufacturing under <b style="color:var(--ink)">cGMP, EMA &amp; EDA</b> — from validation and media fill to batch-record approval and audit readiness.</p>
+        <p class="sub">And a self-directed builder who uses AI-assisted development to turn front-line quality problems into working, security-reviewed tools my team actually uses.</p>
+        <div class="hero-cta">
+          <a href="#initiatives" class="btn btn-gold">View my work
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a href="#contact" class="btn btn-ghost">Get in touch</a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat"><div class="n">8<span>+</span></div><div class="l">Years in pharma QA</div></div>
+          <div class="stat"><div class="n">123</div><div class="l">Countries reached<br>(Remdesivir QA)</div></div>
+          <div class="stat"><div class="n">3</div><div class="l">QA tools built<br>with AI &amp; in use</div></div>
+        </div>
+      </div>
+      <div class="hero-right">
+        <div class="hero-card reveal">
+          <img class="hero-photo" src="assets/fadi.png" alt="Fadi Tawdros, Pharmaceutical Quality Professional" width="98" height="98">
+          <h3>Fadi Tawdros</h3>
+          <div class="role">Pharmaceutical Quality Specialist · Grifols Egypt</div>
+          <div class="hc-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l2.4 7.4H22l-6 4.5 2.3 7.1-6.3-4.6L5.7 21l2.3-7.1-6-4.5h7.6z" stroke-linejoin="round"/></svg><span><b>Sterile facility</b> validation &amp; qualification expert</span></div>
+          <div class="hc-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="12" r="9"/></svg><span>cGMP · EMA · EDA <b>compliance</b></span></div>
+          <div class="hc-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v18M3 12h18" stroke-linecap="round"/></svg><span>Builds <b>AI-assisted</b> QA software</span></div>
+          <div class="hc-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18" stroke-linecap="round"/></svg><span>B.Sc. Pharmacy · <b>EMBA</b></span></div>
+          <div class="hc-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="10" r="3"/><path d="M12 2a8 8 0 00-8 8c0 5 8 12 8 12s8-7 8-12a8 8 0 00-8-8z" stroke-linejoin="round"/></svg><span>Egypt-based · <b>open to relocation</b></span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section id="about">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">About</span>
+      <h2>Quality rigor, meet <span class="gold">builder's instinct</span>.</h2>
+      <p>The rare QA professional who can write the validation protocol — then direct the AI that builds the tool to run it.</p>
+    </div>
+    <div class="about-grid">
+      <div class="reveal">
+        <p>I'm a pharmaceutical Quality Assurance professional with a <b>B.Sc. in Pharmacy from The British University in Egypt</b> and an <b>EMBA from Heliopolis University</b>. For eight years I've upheld strict quality standards across <b>aseptic and sterile manufacturing</b>, owning process validation, equipment qualification, media fill, batch-record review and external-audit readiness under <span class="gold">cGMP, EMA and EDA</span> frameworks.</p>
+        <p>During the pandemic I served as the responsible QA for the <b>first Remdesivir pilot batches</b> produced for COVID-19 emergency use — later exported to 123 countries. That sense of consequence is how I approach every record, deviation and CAPA: get it right, because it matters.</p>
+        <p>What sets me apart now is what I do <i>after</i> the audit. Using <b>AI-assisted development</b>, I translate the operational problems I understand first-hand — cold-chain reviews, donor-deferral logic, performance fairness — directly into working, secured software, without waiting on a dedicated engineering team. The people closest to a process are often best placed to fix its tooling gaps.</p>
+      </div>
+      <div class="reveal">
+        <div class="fact-card">
+          <h4>At a glance</h4>
+          <div class="fact"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18" stroke-linecap="round"/></svg><div><div class="t">B.Sc. Pharmacy · EMBA</div><div class="d">British University in Egypt · Heliopolis University</div></div></div>
+          <div class="fact"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2" stroke-linecap="round"/></svg><div><div class="t">8+ years in pharma QA</div><div class="d">Sterile / aseptic manufacturing focus</div></div></div>
+          <div class="fact"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h4l3 8 4-16 3 8h4" stroke-linecap="round" stroke-linejoin="round"/></svg><div><div class="t">cGMP · EMA · EDA</div><div class="d">Validation, qualification &amp; compliance</div></div></div>
+          <div class="fact"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 18l6-6-6-6M8 6l-6 6 6 6" stroke-linecap="round" stroke-linejoin="round"/></svg><div><div class="t">AI-assisted builder</div><div class="d">3 QA tools built with AI &amp; in use</div></div></div>
+          <div class="fact"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M2 12h20M12 2a15 15 0 010 20M12 2a15 15 0 000 20" /></svg><div><div class="t">Languages</div><div class="d">Arabic (native) · English (B2–C2)</div></div></div>
+          <div class="digstrip">
+            <span class="chip">DigComp 2.1 self-assessment</span>
+            <span class="chip">Data literacy <b>L5</b></span>
+            <span class="chip">Content creation <b>L6</b></span>
+            <span class="chip">Problem solving <b>L6</b></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="wrap"><div class="divider-glow"></div></div>
+
+<!-- ============ EXPERIENCE ============ -->
+<section id="experience">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Experience</span>
+      <h2>Nearly a decade of <span class="gold">getting it right</span>.</h2>
+      <p>Progressive QA roles across plasma derivatives, sterile manufacturing and API production.</p>
+    </div>
+    <div class="timeline">
+
+      <div class="tl-item current reveal">
+        <div class="tl-dot"></div>
+        <div class="tl-card">
+          <div class="tl-top"><div class="tl-role">Pharmaceutical Quality Specialist</div><div class="tl-when">Jan 2026 — Present</div></div>
+          <div class="tl-co">Grifols Egypt for Plasma Derivatives (GEPD) · Egypt<span class="badge-cur">Current</span></div>
+          <ul>
+            <li>Execute comprehensive QA at donor-center level, ensuring full compliance with internal protocols, <b>EDA, EMA and cGMP</b> requirements.</li>
+            <li>Built <b>custom AI-assisted tools and applications</b> that automate day-to-day tasks — maximising accuracy while cutting manual effort and processing time.</li>
+            <li>Conduct periodic reviews of donor-center records, equipment QC logs and incident reports; perform systematic employee observations to monitor procedural compliance.</li>
+            <li>Run higher-level document reviews, proactively identifying quality gaps and driving corrective actions across center operations.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="tl-item reveal">
+        <div class="tl-dot"></div>
+        <div class="tl-card">
+          <div class="tl-top"><div class="tl-role">Career development — Türkiye &amp; EMBA</div><div class="tl-when">2023 — 2025</div></div>
+          <div class="tl-co">Erasmus+ project work · Ankara, Türkiye &amp; Heliopolis University, Egypt</div>
+          <ul>
+            <li>Relocated to Türkiye for <b>Erasmus+ project development</b> — authored funded proposals, led an English Conversation Club and spoke at international workshops (see <b>Beyond the Lab</b>).</li>
+            <li>Completed an <b>Executive MBA (EMBA)</b> at Heliopolis University, adding business and leadership depth to my QA foundation.</li>
+            <li>Returned to pharmaceutical QA at <b>Grifols Egypt</b> in January 2026.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="tl-item reveal">
+        <div class="tl-dot"></div>
+        <div class="tl-card">
+          <div class="tl-top"><div class="tl-role">QA Senior Specialist — Sterile Facility</div><div class="tl-when">Jun 2021 — Aug 2023</div></div>
+          <div class="tl-co">EVA Pharma · Giza, Egypt</div>
+          <ul>
+            <li>Led a cross-functional <b>autoclave validation</b> project with a data-driven risk assessment — boosting compliance and cutting validation-related non-productive time by <b>50%</b>; earned an official Letter of Appreciation and a performance award.</li>
+            <li>Owned the annual <b>media-fill plan</b>, assessing 3+ new products weekly and substantially shortening product-introduction lead time; trained 5 team members and was named <b>Employee of the Month</b>.</li>
+            <li>Executed qualification &amp; validation for Autoclaves, Heat Tunnel, SIP, Washers and Lyophilizer.</li>
+            <li>Reviewed and approved <b>BMR/BPR</b>; tightened the review process to sharply reduce recurring documentation errors and lower external-audit non-conformances year over year.</li>
+            <li>Mentored newly hired QA pharmacists and internship students.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="tl-item reveal">
+        <div class="tl-dot"></div>
+        <div class="tl-card">
+          <div class="tl-top"><div class="tl-role">QA Specialist</div><div class="tl-when">Nov 2019 — Jun 2021</div></div>
+          <div class="tl-co">EVA Pharma · Giza, Egypt</div>
+          <ul>
+            <li>Responsible QA for <b>API manufacturing of the first Remdesivir pilot batches</b> for COVID-19 emergency cases — exported to <b>123 countries</b>; awarded Employee of the Month.</li>
+            <li>Executed process re/validation and authored the reports — consolidating redundant sampling to cut sample count and processing time by about <b>two-thirds</b>.</li>
+            <li>Coordinated clean-room validation to the annual plan, with sustained on-floor QA oversight to assure cGMP and reduce audit points.</li>
+            <li>Investigated and followed up on deviations and change controls.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="tl-item reveal">
+        <div class="tl-dot"></div>
+        <div class="tl-card">
+          <div class="tl-top"><div class="tl-role">QA Specialist</div><div class="tl-when">Feb 2018 — Oct 2019</div></div>
+          <div class="tl-co">Sunny Pharma · Cairo, Egypt</div>
+          <ul>
+            <li>Executed annual re-qualification and re-validation plans for <b>100% of activities</b> (incl. third-party).</li>
+            <li>Created, reviewed and finalised <b>media-fill</b> protocols, execution and reports.</li>
+            <li>Authored process-validation protocols and sampling plans for new products.</li>
+            <li>Addressed non-conformances — pausing production, initiating deviations and setting CAPAs.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="tl-item reveal">
+        <div class="tl-dot"></div>
+        <div class="tl-card">
+          <div class="tl-top"><div class="tl-role">Shift Manager</div><div class="tl-when">Jul 2017 — Jan 2018</div></div>
+          <div class="tl-co">Dr. Rafeek Pharmacies · Suez Governorate, Egypt</div>
+          <ul>
+            <li>Improved medication adherence through patient counseling and follow-up consultations.</li>
+            <li>Managed inventory and supplier relations, increasing sales and availability by <b>50%+</b>.</li>
+            <li>Supervised pharmacy assistants.</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div class="wrap"><div class="divider-glow"></div></div>
+
+<!-- ============ QA INITIATIVES ============ -->
+<section id="initiatives">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Quality in Action</span>
+      <h2>QA initiatives that <span class="gold">moved the needle</span>.</h2>
+      <p>Two projects where I took the initiative, owned the risk, and delivered measurable, audited impact.</p>
+    </div>
+
+    <!-- CASE 1 — REMDESIVIR -->
+    <article class="case reveal">
+      <div class="case-head">
+        <span class="case-num">INITIATIVE 01</span>
+        <span class="case-tag">Quality Risk Management · Regulatory</span>
+      </div>
+      <h3>Bringing Remdesivir API to Egypt — under pandemic pressure</h3>
+      <p class="case-sit">During COVID-19, import limits left Egypt critically short of Remdesivir for severe cases. EVA Pharma decided to manufacture the API domestically — a first for the country. <b>I took the initiative to join the project team as the responsible QA member</b>, charged with starting production fast without compromising quality or safety.</p>
+      <div class="case-body">
+        <div class="case-do">
+          <h4>What I did</h4>
+          <ul>
+            <li>Studied the preparation process and attended trial-batch manufacturing first-hand to clarify quality requirements as inputs for the risk assessment.</li>
+            <li>As the QA member owning <b>QRM and validation</b>, I quantified the risks of a hazardous new API using objective risk-assessment tools — separating acceptable risks from those that demanded additional controls.</li>
+            <li>Aligned <b>internal stakeholders</b> (planning, production, engineering) who first resisted the extra controls — showing objectively how they prevent deviations and cross-contamination. QA became a proactive partner, not the brake on production.</li>
+            <li>Handled <b>external regulators</b> (authorities &amp; WHO/MoH representatives) through repeated rounds of review — presenting the risk assessments and added precautions, resolving every comment until the manufacturing licence was granted.</li>
+          </ul>
+          <div class="case-takeaway">What I'm proudest of is the human scale of this: an initiative that drove <b>global impact</b>. Knowing I helped deliver a critically needed treatment to patients during a national shortage — getting it right when lives depended on the batch behind it — is a feeling that stays with me.</div>
+        </div>
+        <div class="impact-panel">
+          <h4>Impact</h4>
+          <div class="impact-metric"><div class="n">1st</div><div class="l">Remdesivir API ever produced in Egypt</div></div>
+          <div class="impact-metric"><div class="n">123</div><div class="l">countries it was exported to</div></div>
+          <div class="case-reco"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 21h8M12 17v4M7 4h10v4a5 5 0 01-10 0zM7 4H4v2a3 3 0 003 3M17 4h3v2a3 3 0 01-3 3" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Recognised as Employee of the Month — and promoted to Senior QA that year.</span></div>
+        </div>
+      </div>
+    </article>
+
+    <!-- CASE 2 — AUTOCLAVE VALIDATION -->
+    <article class="case reveal">
+      <div class="case-head">
+        <span class="case-num">INITIATIVE 02</span>
+        <span class="case-tag">Validation · Process Improvement</span>
+      </div>
+      <h3>Cutting autoclave validation downtime by 50%</h3>
+      <p class="case-sit">As Senior QA Specialist responsible for validation, I took it on myself to <b>reduce validation downtime while maintaining — or improving — compliance</b>, rather than accept the status quo of repeating low-value cycles.</p>
+      <div class="case-body">
+        <div class="case-do">
+          <h4>What I did</h4>
+          <ul>
+            <li>Studied the guidelines in depth — <b>ICH, EudraLex</b> and the manufacturer's manuals.</li>
+            <li>Ran a <b>risk-based assessment</b> of sterilisation loads, using data from previous cycles to identify which loads genuinely represented the worst cases.</li>
+            <li>Validated the approach with experts — the autoclave manufacturer's (Fedegari) technical team and, via a webinar speaker, an <b>engineering manager at Abbott (USA)</b> I still stay in contact with.</li>
+            <li>Redesigned the <b>validation matrix</b> around true worst cases instead of repeating low-risk scenarios; secured my manager's approval, then sold the timeline and savings to other departments.</li>
+            <li>Updated the <b>SOPs and validation protocols</b> and trained operators and QA staff so everyone understood the rationale.</li>
+          </ul>
+          <div class="case-takeaway">My biggest takeaway: how to <b>influence without authority</b> — using data to convince sceptical stakeholders and lead improvement that balances quality with efficiency.</div>
+        </div>
+        <div class="impact-panel">
+          <h4>Impact</h4>
+          <div class="impact-metric"><div class="n">~50%</div><div class="l">less validation-related non-productive time — and lower validation cost</div></div>
+          <div class="impact-metric"><div class="n">100%</div><div class="l">sterility assurance maintained — validated to ICH / EudraLex worst-case loads</div></div>
+          <div class="case-reco"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v12H5.2L4 18z" stroke-linejoin="round"/></svg><span>Earned an official appreciation letter and a one-week reward.</span></div>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<div class="wrap"><div class="divider-glow"></div></div>
+
+<!-- ============ PROJECTS ============ -->
+<section id="projects">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Featured Work · AI &amp; Automation</span>
+      <h2>Software built by the person <span class="gold">closest to the problem</span>.</h2>
+      <p>Three production tools I conceived, designed and shipped — each grounded in real GMP quality-management thinking.</p>
+    </div>
+
+    <div class="proj-intro reveal">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l2.4 7.4H22l-6 4.5 2.3 7.1-6.3-4.6L5.7 21l2.3-7.1-6-4.5h7.6z" stroke-linejoin="round"/></svg>
+      <p><b>Why this matters:</b> modern AI development tools have lowered the barrier enough that deep domain expertise can translate directly into working, validated software. I directed the architecture, domain logic, security posture and deployment — using AI to produce the code.</p>
+    </div>
+
+    <!-- PROJECT 1 -->
+    <article class="project reveal">
+      <div class="p-info">
+        <div class="p-main">
+          <div class="p-num">PROJECT 01</div>
+          <div class="p-tags"><span class="p-tag live">Live tool</span><span class="p-tag">Single-file</span><span class="p-tag">Offline · Security-reviewed</span></div>
+          <h3>Freezer Temperature Gap Checker</h3>
+          <p>A lightweight, browser-based QA tool that turns the slow, error-prone daily cold-chain log review at a plasma collection site into a few seconds. Paste the exported freezer data and it instantly flags every interval with a missing reading — pinpointing exactly when and how many — plus a per-day min / avg / max summary.</p>
+          <div class="p-actions">
+            <a href="https://safwat246-lang.github.io/Freezer-Temperature-Gap-Checker/" target="_blank" rel="noopener" class="btn btn-gold">Open the live tool
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M7 17L17 7M9 7h8v8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+        </div>
+        <ul class="p-feats">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12l4 4L19 6" stroke-linecap="round" stroke-linejoin="round"/></svg><b>Configurable gap interval</b> (defaults to 5 minutes)</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12l4 4L19 6" stroke-linecap="round" stroke-linejoin="round"/></svg>Unparseable rows are <b>flagged, never silently dropped</b></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12l4 4L19 6" stroke-linecap="round" stroke-linejoin="round"/></svg>Runs <b>100% offline</b> — no network, no uploads, nothing saved (verified by full security review)</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12l4 4L19 6" stroke-linecap="round" stroke-linejoin="round"/></svg>Single self-contained file · <b>zero install</b>, slots into a regulated GMP workflow</li>
+        </ul>
+      </div>
+      <div class="p-stage">
+        <img class="solo-shot" src="assets/projects/p1-report.png" alt="Freezer Temperature Gap Checker report — overview, daily min/avg/max summary and detected gap details" loading="lazy">
+      </div>
+    </article>
+
+    <!-- PROJECT 2 -->
+    <article class="project reveal">
+      <div class="p-info">
+        <div class="p-main">
+          <div class="p-num">PROJECT 02</div>
+          <div class="p-tags"><span class="p-tag">Case-management app</span><span class="p-tag ai">AI-assisted build</span><span class="p-tag">Google Apps Script</span></div>
+          <h3>Suez DC — UPC Workflow Tracker</h3>
+          <p>A rule-driven case-management system that automates the entire plasma-donor deferral workflow — from reactive lab result through donor notification, confirmatory retest, counseling and audit-ready closure. Built on Google Apps Script + Sheets with zero hosting infrastructure.</p>
+          <p class="p-note"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16h.01" stroke-linecap="round"/></svg>A private, secure application designed for sensitive data, demonstrated via screenshots to maintain confidentiality.</p>
+        </div>
+        <ul class="p-feats">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12l4 4L19 6" stroke-linecap="round" stroke-linejoin="round"/></svg><b>Configurable deferral-rules engine</b> — change a policy once, every active case adapts</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12l4 4L19 6" stroke-linecap="round" stroke-linejoin="round"/></svg><b>Urgency-aware dashboard</b> — due-today / overdue escalation independent of step progress</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12l4 4L19 6" stroke-linecap="round" stroke-linejoin="round"/></svg>Full lifecycle with <b>locked, auditable closed cases</b></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12l4 4L19 6" stroke-linecap="round" stroke-linejoin="round"/></svg><b>Audit-ready PDF exports</b> + list &amp; month calendar views</li>
+        </ul>
+      </div>
+      <div class="p-stage">
+        <div class="carousel" data-carousel>
+          <div class="slides">
+            <div class="slide active"><img src="assets/projects/p2-dashboard.png" alt="Suez DC Workflow Tracker dashboard with overdue and pending cases" loading="lazy"></div>
+            <div class="slide"><img src="assets/projects/p2-calendar.png" alt="Workflow tracker month calendar of appointments and deadlines" loading="lazy"></div>
+            <div class="slide"><img src="assets/projects/p2-closed.png" alt="Closed files table with audit-ready PDF export" loading="lazy"></div>
+          </div>
+          <div class="car-bar">
+            <span class="car-cap">Dashboard</span>
+            <div class="car-nav">
+              <button class="car-btn prev" aria-label="Previous"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M15 18l-6-6 6-6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+              <div class="dots"></div>
+              <button class="car-btn next" aria-label="Next"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M9 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- PROJECT 3 -->
+    <article class="project reveal">
+      <div class="p-info">
+        <div class="p-main">
+          <div class="p-num">PROJECT 03</div>
+          <div class="p-tags"><span class="p-tag">Multi-user · in production</span><span class="p-tag ai">AI-assisted build</span><span class="p-tag">Cloud web app</span></div>
+          <h3>Quality Command Center</h3>
+          <p>A live, multi-user web app that manages recurring and assigned quality tasks across a team and scores each person's performance against the criteria you define — with separate, role-based views for administrators, managers and employees.</p>
+          <p class="p-note"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16h.01" stroke-linecap="round"/></svg>Handles confidential team performance data, so it's shown here through screenshots only; access is role-gated and the build was independently security-reviewed.</p>
+        </div>
+        <ul class="p-feats">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12l4 4L19 6" stroke-linecap="round" stroke-linejoin="round"/></svg><b>Fair performance scoring</b> — rate each person on the criteria you choose, each weighted to your policy</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12l4 4L19 6" stroke-linecap="round" stroke-linejoin="round"/></svg><b>Recurring tasks on any cadence</b> — daily, weekly, monthly or yearly — that automatically move to the next working day</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12l4 4L19 6" stroke-linecap="round" stroke-linejoin="round"/></svg><b>Separate views</b> for admins, managers and employees — each sees exactly what their role needs</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12l4 4L19 6" stroke-linecap="round" stroke-linejoin="round"/></svg><b>Independently security-reviewed</b> and hardened, so sensitive performance data stays protected</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12l4 4L19 6" stroke-linecap="round" stroke-linejoin="round"/></svg><b>Privacy built in</b> — the team shares task progress to avoid duplicated work, while each person's ratings stay private to them</li>
+        </ul>
+      </div>
+      <div class="p-stage">
+        <div class="carousel" data-carousel>
+          <div class="slides">
+            <div class="slide active"><img src="assets/projects/p3-today.png" alt="Employee Today view with recurring and assigned tasks" loading="lazy"></div>
+            <div class="slide"><img src="assets/projects/p3-assign.png" alt="Manager assign-tasks view" loading="lazy"></div>
+            <div class="slide"><img src="assets/projects/p3-recurring.png" alt="Recurring task templates — daily and weekly" loading="lazy"></div>
+            <div class="slide"><img src="assets/projects/p3-criteria.png" alt="Admin evaluation criteria with weighted scoring" loading="lazy"></div>
+            <div class="slide"><img src="assets/projects/p3-bands.png" alt="Admin performance bands configuration" loading="lazy"></div>
+            <div class="slide"><img src="assets/projects/p3-login.png" alt="Quality Command Center secure login" loading="lazy"></div>
+          </div>
+          <div class="car-bar">
+            <span class="car-cap">Today</span>
+            <div class="car-nav">
+              <button class="car-btn prev" aria-label="Previous"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M15 18l-6-6 6-6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+              <div class="dots"></div>
+              <button class="car-btn next" aria-label="Next"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M9 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<div class="wrap"><div class="divider-glow"></div></div>
+
+<!-- ============ SKILLS ============ -->
+<section id="skills">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Capabilities</span>
+      <h2>What I bring to the <span class="gold">floor — and beyond</span>.</h2>
+    </div>
+    <div class="skills-grid">
+      <div class="skill-card reveal">
+        <div class="skill-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 3l7 4v5c0 5-3.5 8-7 9-3.5-1-7-4-7-9V7z" stroke-linejoin="round"/></svg></div>
+        <h4>Quality &amp; Compliance</h4>
+        <div class="skill-list">
+          <span>cGMP</span><span>EMA</span><span>EDA</span><span>Process Validation</span><span>Equipment Qualification</span><span>Media Fill / APS</span><span>Clean-Room Validation</span><span>Quality Risk Management</span><span>Deviations · CAPA</span><span>Change Control</span><span>BMR / BPR Review</span><span>Audit Readiness</span><span>CTD / eCTD</span>
+        </div>
+      </div>
+      <div class="skill-card reveal">
+        <div class="skill-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 18l6-6-6-6M8 6l-6 6 6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <h4>AI &amp; Digital Tools</h4>
+        <div class="skill-list">
+          <span>AI-assisted development</span><span>Prompt engineering</span><span>Directing app builds</span><span>Turning QA needs into working tools</span><span>Software testing &amp; validation</span><span>Workflow automation</span><span>Digitising manual processes</span><span>Data analysis</span><span>Advanced computer literacy</span>
+        </div>
+      </div>
+      <div class="skill-card reveal">
+        <div class="skill-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="8" r="3.2"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6" stroke-linecap="round"/><path d="M16 4.5a3 3 0 010 6M18 14c2 .9 3.5 2.8 3.5 5.5" stroke-linecap="round"/></svg></div>
+        <h4>Professional</h4>
+        <div class="skill-list">
+          <span>Cross-functional leadership</span><span>Training &amp; mentoring</span><span>Technical writing</span><span>Risk assessment</span><span>EMBA business acumen</span><span>Stakeholder communication</span><span>Cross-cultural collaboration</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="wrap"><div class="divider-glow"></div></div>
+
+<!-- ============ CREDENTIALS ============ -->
+<section id="credentials">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Credentials</span>
+      <h2>Certifications &amp; <span class="gold">recognition</span>.</h2>
+    </div>
+    <div class="cred-grid">
+      <div class="panel reveal">
+        <h4><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l2.4 4.9 5.4.8-3.9 3.8.9 5.4-4.8-2.5-4.8 2.5.9-5.4L4.2 7.7l5.4-.8z" stroke-linejoin="round"/></svg> Certifications</h4>
+        <div class="cert"><div><div class="c-name">Foundations of GMP — Validation</div><div class="c-iss">USP</div></div><div class="c-yr">2020</div></div>
+        <div class="cert"><div><div class="c-name">Foundations of GMP — Qualification</div><div class="c-iss">USP</div></div><div class="c-yr">2020</div></div>
+        <div class="cert"><div><div class="c-name">Foundations of GMP — Quality Risk Management</div><div class="c-iss">USP</div></div><div class="c-yr">2020</div></div>
+        <div class="cert"><div><div class="c-name">AI Essentials</div><div class="c-iss">Google</div></div><div class="c-yr">2024</div></div>
+        <div class="cert"><div><div class="c-name">AI Career Essentials (AICE scholarship)</div><div class="c-iss">ALX Arabia</div></div><div class="c-yr">2024</div></div>
+        <div class="cert"><div><div class="c-name">Data Analysis</div><div class="c-iss">Udacity</div></div><div class="c-yr">2022</div></div>
+        <div class="cert"><div><div class="c-name">Technical &amp; Regulatory Requirements for CTD / eCTD</div><div class="c-iss">EVA Pharma</div></div><div class="c-yr">2022</div></div>
+        <div class="cert"><div><div class="c-name">Leadership Preparation Program</div><div class="c-iss">Ain Shams University</div></div><div class="c-yr">2023</div></div>
+        <div class="cert"><div><div class="c-name">Total Quality Management</div><div class="c-iss">Brooklyn Business School</div></div><div class="c-yr">In progress</div></div>
+      </div>
+      <div class="panel reveal">
+        <h4><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 21h8M12 17v4M7 4h10v4a5 5 0 01-10 0zM7 4H4v2a3 3 0 003 3M17 4h3v2a3 3 0 01-3 3" stroke-linecap="round" stroke-linejoin="round"/></svg> Honours &amp; Awards</h4>
+        <div class="award"><div class="tr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 21h8M12 17v4M7 4h10v4a5 5 0 01-10 0zM7 4H4v2a3 3 0 003 3M17 4h3v2a3 3 0 01-3 3" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div><div class="a-t">Employee of the Month</div><div class="a-d">EVA Pharma · Mar 2021</div></div></div>
+        <div class="award"><div class="tr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v12H5.2L4 18z" stroke-linejoin="round"/></svg></div><div><div class="a-t">Letter of Appreciation + 1-week reward</div><div class="a-d">EVA Pharma · Oct 2021</div></div></div>
+        <div class="award"><div class="tr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 21h8M12 17v4M7 4h10v4a5 5 0 01-10 0zM7 4H4v2a3 3 0 003 3M17 4h3v2a3 3 0 01-3 3" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div><div class="a-t">Employee of the Month</div><div class="a-d">EVA Pharma · Nov 2022</div></div></div>
+        <h4 style="margin-top:28px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3l8 4-8 4-8-4z" stroke-linejoin="round"/><path d="M4 11l8 4 8-4M4 15l8 4 8-4" stroke-linejoin="round"/></svg> Education</h4>
+        <div class="cert"><div><div class="c-name">EMBA — Executive MBA</div><div class="c-iss">Heliopolis University</div></div><div class="c-yr">2024–25</div></div>
+        <div class="cert"><div><div class="c-name">B.Sc. Pharmacy</div><div class="c-iss">The British University in Egypt</div></div><div class="c-yr">2012–17</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="wrap"><div class="divider-glow"></div></div>
+
+<!-- ============ BEYOND WORK ============ -->
+<section id="beyond">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Beyond the Lab</span>
+      <h2>Leadership, <span class="gold">service &amp; a global outlook</span>.</h2>
+    </div>
+    <div class="beyond-grid">
+      <div class="by-card reveal">
+        <div class="by-top">
+          <div class="by-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20l-1.5-1.4C5 13.6 2 10.9 2 7.5 2 5 4 3 6.5 3 8 3 9.4 3.7 12 6c2.6-2.3 4-3 5.5-3C20 3 22 5 22 7.5c0 3.4-3 6.1-8.5 11.1z" stroke-linejoin="round"/></svg></div>
+          <div><h4>Erasmus+ Project Developer &amp; Writer</h4><div class="by-meta">Ankara, Türkiye · Aug 2024 – Jun 2025</div></div>
+        </div>
+        <p>Authored three funded project proposals; led an English Conversation Club for diverse, multi-age groups; spoke alongside Ankara's municipal government and civil-society partners; and supported humanitarian-aid coordination for refugee communities.</p>
+      </div>
+      <div class="by-card reveal">
+        <div class="by-top">
+          <div class="by-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 11l18-7-7 18-2.5-7.5z" stroke-linejoin="round"/></svg></div>
+          <div><h4>Guest Speaker — Pharmaceutical Fields</h4><div class="by-meta">Etimesgut Municipality, Ankara · Feb 2025</div></div>
+        </div>
+        <p>Invited speaker at the International Education &amp; Science Workshop, presenting on the pharmaceutical sector to an international audience.</p>
+      </div>
+      <div class="by-card reveal">
+        <div class="by-top">
+          <div class="by-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M2 12h20M12 2a15 15 0 010 20M12 2a15 15 0 000 20"/></svg></div>
+          <div><h4>Anna Lindh Foundation</h4><div class="by-meta">Tirana, Albania · Jun 2025</div></div>
+        </div>
+        <p>Participant in an event fostering intercultural dialogue and cooperation across the Euro-Mediterranean region.</p>
+      </div>
+      <div class="by-card reveal">
+        <div class="by-top">
+          <div class="by-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 14c4 0 7 2 7 4.5V21H5v-2.5C5 16 8 14 12 14z" stroke-linejoin="round"/><circle cx="12" cy="8" r="3.5"/></svg></div>
+          <div><h4>Languages &amp; Mobility</h4><div class="by-meta">Arabic (native) · English (B2–C2)</div></div>
+        </div>
+        <p>Comfortable in international, cross-cultural teams, with hands-on experience across Egypt and Türkiye and openness to relocation.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section id="contact">
+  <div class="wrap">
+    <div class="contact-card reveal">
+      <span class="eyebrow" style="justify-content:center">Get in touch</span>
+      <h2>Let's talk <span class="gold">quality</span>.</h2>
+      <p>Open to QA and quality-operations roles — in Egypt or relocating — where regulatory depth and a builder's mindset both count. Tell me the quality problem you're facing, and I'll tell you how I'd approach it.</p>
+      <div class="contact-methods">
+        <a class="cm" href="mailto:Fadi.safwat@icloud.com">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6" stroke-linecap="round"/></svg>
+          <div><div class="l">Email</div><div class="v">Fadi.safwat@icloud.com</div></div>
+        </a>
+        <a class="cm" href="https://www.linkedin.com/in/fadi-safwat/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5A2.5 2.5 0 002.5 6 2.5 2.5 0 005 8.5 2.5 2.5 0 007.5 6 2.5 2.5 0 004.98 3.5zM3 9h4v12H3zM10 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1V21h-4v-5.4c0-1.3-.02-2.96-1.8-2.96-1.8 0-2.08 1.4-2.08 2.86V21H10z"/></svg>
+          <div><div class="l">LinkedIn</div><div class="v">/in/fadi-safwat</div></div>
+        </a>
+        <a class="cm" href="tel:+201227965658">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 005 5L15 13l5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2z" stroke-linejoin="round"/></svg>
+          <div><div class="l">Phone</div><div class="v">(+20) 122 796 5658</div></div>
+        </a>
+      </div>
+      <div class="contact-loc">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="10" r="3"/><path d="M12 2a8 8 0 00-8 8c0 5 8 12 8 12s8-7 8-12a8 8 0 00-8-8z" stroke-linejoin="round"/></svg>
+        Based in Egypt · Open to relocation
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="foot-inner">
+    <div class="c">© <span id="yr"></span> Fadi Tawdros · Pharmaceutical Quality Assurance Professional</div>
+    <div class="foot-links">
+      <a href="#home">Top</a>
+      <a href="#projects">Projects</a>
+      <a href="https://www.linkedin.com/in/fadi-safwat/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="mailto:Fadi.safwat@icloud.com">Email</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // year
+  document.getElementById('yr').textContent = new Date().getFullYear();
+
+  // nav scrolled state
+  const nav = document.getElementById('nav');
+  const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 24);
+  onScroll(); window.addEventListener('scroll', onScroll, {passive:true});
+
+  // mobile menu
+  const burger = document.getElementById('burger');
+  const navlinks = document.getElementById('navlinks');
+  burger.addEventListener('click', () => {
+    const open = navlinks.classList.toggle('open');
+    burger.classList.toggle('open', open);
+  });
+  navlinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    navlinks.classList.remove('open'); burger.classList.remove('open');
+  }));
+
+  // reveal on scroll
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, {threshold:0.12, rootMargin:'0px 0px -40px 0px'});
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+  // carousels
+  document.querySelectorAll('[data-carousel]').forEach(car => {
+    const slides = [...car.querySelectorAll('.slide')];
+    const cap = car.querySelector('.car-cap');
+    const dotsWrap = car.querySelector('.dots');
+    const caps = slides.map(s => s.querySelector('img')?.alt?.split('—')[0] || '');
+    let i = 0, timer;
+    slides.forEach((_, idx) => {
+      const d = document.createElement('button');
+      d.className = 'dot' + (idx===0?' active':'');
+      d.setAttribute('aria-label','Slide '+(idx+1));
+      d.addEventListener('click', () => { go(idx); reset(); });
+      dotsWrap.appendChild(d);
+    });
+    const dots = [...dotsWrap.children];
+    const labels = ['Dashboard','Calendar','Closed files']; // p2 fallback
+    function go(n){
+      i = (n + slides.length) % slides.length;
+      slides.forEach((s,idx) => s.classList.toggle('active', idx===i));
+      dots.forEach((d,idx) => d.classList.toggle('active', idx===i));
+      if (cap) cap.textContent = capFor(i);
+    }
+    function capFor(n){
+      const alt = slides[n].querySelector('img').getAttribute('alt')||'';
+      // short caption: take first 2-3 words
+      const map = {
+        'Suez':'Dashboard','Workflow tracker month':'Calendar','Closed files':'Closed files',
+        'Employee Today':'Today','Manager assign':'Assign tasks','Recurring task':'Recurring',
+        'Admin evaluation':'Scoring criteria','Admin performance':'Performance bands','Quality Command Center secure':'Secure login'
+      };
+      for (const k in map){ if (alt.includes(k)) return map[k]; }
+      return '';
+    }
+    car.querySelector('.next').addEventListener('click', () => { go(i+1); reset(); });
+    car.querySelector('.prev').addEventListener('click', () => { go(i-1); reset(); });
+    function auto(){ timer = setInterval(() => go(i+1), 5200); }
+    function reset(){ clearInterval(timer); auto(); }
+    go(0); auto();
+    car.addEventListener('mouseenter', () => clearInterval(timer));
+    car.addEventListener('mouseleave', auto);
+  });
+
+  // active nav link highlight
+  const sections = [...document.querySelectorAll('main section[id]')];
+  const navAnchors = [...document.querySelectorAll('.navlinks a')];
+  const spy = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting){
+        const id = e.target.id;
+        navAnchors.forEach(a => a.style.color = a.getAttribute('href')==='#'+id ? 'var(--gold)' : '');
+      }
+    });
+  }, {rootMargin:'-45% 0px -50% 0px'});
+  sections.forEach(s => spy.observe(s));
+</script>
+</body>
+</html>

@@ -1,0 +1,7 @@
+# Local dev tooling (not needed for the deployed site)
+.claude/
+
+# Redundant source screenshots kept only in the working folder
+# (the live site uses everything under assets/)
+/Project*.png
+/fadi.png
